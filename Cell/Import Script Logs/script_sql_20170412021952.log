@@ -1,0 +1,29 @@
+4/11/2017 9:19:52 PM	This log contains information about the import operation of the script 'script.sql' into project 'Cell' on computer 'ETHANNGUYEN-PC' by user'EthanNguyen.
+4/11/2017 9:19:52 PM	Started importing file: C:\Users\EthanNguyen\Desktop\cell\script.sql 
+4/11/2017 9:19:52 PM	File name C:\Users\EthanNguyen\Desktop\cell\script.sql (size: 44118)
+4/11/2017 9:19:52 PM	Parsing import script
+4/11/2017 9:19:52 PM	Total number of batches in script: 115
+4/11/2017 9:19:52 PM	Total number of statements in script: 34
+4/11/2017 9:19:52 PM	The script was successfully imported into the project.
+4/11/2017 9:19:52 PM	Analyzing schema objects...
+4/11/2017 9:19:52 PM	Scanning project for duplicate elements
+4/11/2017 9:19:52 PM	Element 'Content' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Tables\Content.sql'.
+4/11/2017 9:19:52 PM	Element 'Comment' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Tables\Comment.sql'.
+4/11/2017 9:19:52 PM	Element 'Admin' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Tables\Admin.sql'.
+4/11/2017 9:19:52 PM	Element 'ScenarioContent' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Tables\ScenarioContent.sql'.
+4/11/2017 9:19:52 PM	Element 'Scenario' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Tables\Scenario.sql'.
+4/11/2017 9:19:52 PM	Element 'SubContent' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Tables\SubContent.sql'.
+4/11/2017 9:19:52 PM	Element 'ShowSubContentByContentID' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\ShowSubContentByContentID.sql'.
+4/11/2017 9:19:52 PM	Element 'ShowScenario' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\ShowScenario.sql'.
+4/11/2017 9:19:52 PM	Element 'ShowContentByScenarioID' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\ShowContentByScenarioID.sql'.
+4/11/2017 9:19:52 PM	Element 'ShowContent' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\ShowContent.sql'.
+4/11/2017 9:19:52 PM	Element 'SaveSubContent' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\SaveSubContent.sql'.
+4/11/2017 9:19:52 PM	Element 'SaveScenarioContent' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\SaveScenarioContent.sql'.
+4/11/2017 9:19:52 PM	Element 'SaveScenario' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\SaveScenario.sql'.
+4/11/2017 9:19:52 PM	Element 'SaveContent' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\SaveContent.sql'.
+4/11/2017 9:19:52 PM	Element 'SaveComment' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\SaveComment.sql'.
+4/11/2017 9:19:52 PM	Element 'AdminLogin' was merged into the existing script: 'C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\dbo\Stored Procedures\AdminLogin.sql'.
+4/11/2017 9:19:52 PM	Finished duplicate element processing
+4/11/2017 9:19:52 PM	In the script that you provided to the import operation, one or more statements were not fully understood. These statements were moved to the ScriptsIgnoredOnImport.sql file. Review the file contents for additional information.
+4/11/2017 9:19:52 PM	A summary of the import was saved to the following location: C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\Import Script Logs\script_sql_20170412021952.log
+4/11/2017 9:19:52 PM	Click Finish to continue...

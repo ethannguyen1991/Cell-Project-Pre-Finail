@@ -1,0 +1,14 @@
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\bin\Debug\Cell.dacpac
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\bin\Debug\Cell.dll
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\bin\Debug\Cell.pdb
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\obj\Debug\Model.xml
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\obj\Debug\refactor.xml
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\obj\Debug\postdeploy.sql
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\obj\Debug\predeploy.sql
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\obj\Debug\Cell.dll
+C:\Users\EthanNguyen\Desktop\cell\CellProject\Cell\obj\Debug\Cell.pdb
+C:\Users\EthanNguyen\Desktop\cell\CellDamn-master\Cell\bin\Debug\Cell.dacpac
+C:\Users\EthanNguyen\Desktop\cell\CellDamn-master\Cell\bin\Debug\Cell.dll
+C:\Users\EthanNguyen\Desktop\cell\CellDamn-master\Cell\bin\Debug\Cell.pdb
+C:\Users\EthanNguyen\Desktop\cell\CellDamn-master\Cell\obj\Debug\Cell.dll
+C:\Users\EthanNguyen\Desktop\cell\CellDamn-master\Cell\obj\Debug\Cell.pdb

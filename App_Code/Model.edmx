@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CellModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Cell.dbo.Account' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountId" />
+          </Key>
+          <Property Name="AccountId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="EmailID" Type="varchar" MaxLength="100" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="IsAllowEdit" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsAdmin" Type="bit" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScenarioID" Type="int" Nullable="false" />
+          <Property Name="ContentID" Type="int" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="Grade" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentID" />
+          </Key>
+          <Property Name="ContentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HeadingID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HeadingText" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contents" Type="varchar(max)" Nullable="false" />
+          <Property Name="Image" Type="varchar" MaxLength="200" />
+          <Property Name="HasCommentBox" Type="bit" Nullable="false" />
+          <Property Name="HasButtons" Type="bit" Nullable="false" />
+          <Property Name="Link1Caption" Type="varchar" MaxLength="150" />
+          <Property Name="Link1Description" Type="varchar(max)" />
+          <Property Name="Link2Caption" Type="varchar" MaxLength="150" />
+          <Property Name="Link2Description" Type="varchar(max)" />
+          <Property Name="Link3Caption" Type="varchar" MaxLength="150" />
+          <Property Name="Link3Description" Type="varchar(max)" />
+          <Property Name="Link4Caption" Type="varchar" MaxLength="150" />
+          <Property Name="Link4Description" Type="varchar(max)" />
+          <Property Name="Link5Caption" Type="varchar" MaxLength="150" />
+          <Property Name="Link5Description" Type="varchar(max)" />
+          <Property Name="Link6Caption" Type="varchar" MaxLength="150" />
+          <Property Name="Link6Description" Type="varchar(max)" />
+          <Property Name="IsCreatedByStudent" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Electives">
+          <Key>
+            <PropertyRef Name="electiveId" />
+          </Key>
+          <Property Name="electiveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScenarioId" Type="int" />
+          <Property Name="text" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Scenario">
+          <Key>
+            <PropertyRef Name="ScenarioID" />
+          </Key>
+          <Property Name="ScenarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Welcome" Type="varchar(max)" />
+          <Property Name="LearnAbout" Type="nvarchar(max)" />
+          <Property Name="Desciption" Type="nvarchar(max)" />
+          <Property Name="Details" Type="varchar(max)" Nullable="false" />
+          <Property Name="Rank" Type="varchar" MaxLength="50" />
+          <Property Name="Image" Type="varchar" MaxLength="200" />
+          <Property Name="IsCreatedByStudent" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ScenarioContent">
+          <Key>
+            <PropertyRef Name="ScenarioContentID" />
+          </Key>
+          <Property Name="ScenarioContentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScenarioID" Type="int" Nullable="false" />
+          <Property Name="ContentID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubContent">
+          <Key>
+            <PropertyRef Name="SubContentID" />
+          </Key>
+          <Property Name="SubContentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="ChildID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CellModelStoreContainer">
+          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Electives" EntityType="Self.Electives" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Scenario" EntityType="Self.Scenario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScenarioContent" EntityType="Self.ScenarioContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubContent" EntityType="Self.SubContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Account" EntityType="Self.Account" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Account].[AccountId] AS [AccountId], 
+    [Account].[FirstName] AS [FirstName], 
+    [Account].[LastName] AS [LastName], 
+    [Account].[EmailID] AS [EmailID], 
+    [Account].[UserName] AS [UserName], 
+    [Account].[Password] AS [Password], 
+    [Account].[IsAllowEdit] AS [IsAllowEdit], 
+    [Account].[IsActive] AS [IsActive], 
+    [Account].[IsAdmin] AS [IsAdmin]
+    FROM [dbo].[Account] AS [Account]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CellModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScenarioID" Type="Int32" Nullable="false" />
+          <Property Name="ContentID" Type="Int32" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentID" />
+          </Key>
+          <Property Name="ContentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HeadingID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HeadingText" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="HasCommentBox" Type="Boolean" Nullable="false" />
+          <Property Name="HasButtons" Type="Boolean" Nullable="false" />
+          <Property Name="Link1Caption" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Link1Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link2Caption" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Link2Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link3Caption" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Link3Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link4Caption" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Link4Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link5Caption" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Link5Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link6Caption" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Link6Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IsCreatedByStudent" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Elective">
+          <Key>
+            <PropertyRef Name="electiveId" />
+          </Key>
+          <Property Name="electiveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScenarioId" Type="Int32" />
+          <Property Name="text" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ScenarioContent">
+          <Key>
+            <PropertyRef Name="ScenarioContentID" />
+          </Key>
+          <Property Name="ScenarioContentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScenarioID" Type="Int32" Nullable="false" />
+          <Property Name="ContentID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubContent">
+          <Key>
+            <PropertyRef Name="SubContentID" />
+          </Key>
+          <Property Name="SubContentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="ChildID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CellEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="Contents" EntityType="Self.Content" />
+          <EntitySet Name="Electives" EntityType="Self.Elective" />
+          <EntitySet Name="ScenarioContents" EntityType="Self.ScenarioContent" />
+          <EntitySet Name="SubContents" EntityType="Self.SubContent" />
+          <EntitySet Name="Accounts" EntityType="CellModel.Account" />
+          <EntitySet Name="Scenarios" EntityType="CellModel.Scenario" />
+        </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountId" />
+          </Key>
+          <Property Name="AccountId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IsAllowEdit" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsAdmin" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Scenario">
+          <Key>
+            <PropertyRef Name="ScenarioID" />
+          </Key>
+          <Property Name="ScenarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Welcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LearnAbout" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Desciption" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Rank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IsCreatedByStudent" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CellModelStoreContainer" CdmEntityContainer="CellEntities">
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="CellModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+                <ScalarProperty Name="ScenarioID" ColumnName="ScenarioID" />
+                <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="CellModel.Content">
+              <MappingFragment StoreEntitySet="Content">
+                <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+                <ScalarProperty Name="HeadingID" ColumnName="HeadingID" />
+                <ScalarProperty Name="HeadingText" ColumnName="HeadingText" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="HasCommentBox" ColumnName="HasCommentBox" />
+                <ScalarProperty Name="HasButtons" ColumnName="HasButtons" />
+                <ScalarProperty Name="Link1Caption" ColumnName="Link1Caption" />
+                <ScalarProperty Name="Link1Description" ColumnName="Link1Description" />
+                <ScalarProperty Name="Link2Caption" ColumnName="Link2Caption" />
+                <ScalarProperty Name="Link2Description" ColumnName="Link2Description" />
+                <ScalarProperty Name="Link3Caption" ColumnName="Link3Caption" />
+                <ScalarProperty Name="Link3Description" ColumnName="Link3Description" />
+                <ScalarProperty Name="Link4Caption" ColumnName="Link4Caption" />
+                <ScalarProperty Name="Link4Description" ColumnName="Link4Description" />
+                <ScalarProperty Name="Link5Caption" ColumnName="Link5Caption" />
+                <ScalarProperty Name="Link5Description" ColumnName="Link5Description" />
+                <ScalarProperty Name="Link6Caption" ColumnName="Link6Caption" />
+                <ScalarProperty Name="Link6Description" ColumnName="Link6Description" />
+                <ScalarProperty Name="IsCreatedByStudent" ColumnName="IsCreatedByStudent" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Electives">
+            <EntityTypeMapping TypeName="CellModel.Elective">
+              <MappingFragment StoreEntitySet="Electives">
+                <ScalarProperty Name="electiveId" ColumnName="electiveId" />
+                <ScalarProperty Name="ScenarioId" ColumnName="ScenarioId" />
+                <ScalarProperty Name="text" ColumnName="text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScenarioContents">
+            <EntityTypeMapping TypeName="CellModel.ScenarioContent">
+              <MappingFragment StoreEntitySet="ScenarioContent">
+                <ScalarProperty Name="ScenarioContentID" ColumnName="ScenarioContentID" />
+                <ScalarProperty Name="ScenarioID" ColumnName="ScenarioID" />
+                <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubContents">
+            <EntityTypeMapping TypeName="CellModel.SubContent">
+              <MappingFragment StoreEntitySet="SubContent">
+                <ScalarProperty Name="SubContentID" ColumnName="SubContentID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="CellModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsAllowEdit" ColumnName="IsAllowEdit" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Scenarios">
+            <EntityTypeMapping TypeName="CellModel.Scenario">
+              <MappingFragment StoreEntitySet="Scenario">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsCreatedByStudent" ColumnName="IsCreatedByStudent" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Desciption" ColumnName="Desciption" />
+                <ScalarProperty Name="LearnAbout" ColumnName="LearnAbout" />
+                <ScalarProperty Name="Welcome" ColumnName="Welcome" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ScenarioID" ColumnName="ScenarioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
