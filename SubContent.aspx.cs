@@ -167,7 +167,6 @@ public partial class SubContent : System.Web.UI.Page
                     var getscanrio = (from rs in context.Scenarios where rs.ScenarioID == scenarioid select rs).FirstOrDefault();
                     if(getscanrio!=null)
                     {
-                        getscanrio.Rank = getscanrio.Rank + 1;
                         context.SaveChanges();
                     }
 

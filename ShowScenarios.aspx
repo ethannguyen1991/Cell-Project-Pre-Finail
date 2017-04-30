@@ -18,6 +18,10 @@
                                     <span class="glyphicon glyphicon-plus"></span> Add Scenario
                                 </asp:LinkButton>
                             </div>
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <asp:TextBox ID="txtName" runat="server" CssClass="form-control" require></asp:TextBox>
+                            </div>
                         </div>
                     </div>
                     <div class="row">

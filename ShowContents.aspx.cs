@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class ShowContents : Page
 {
+    public bool IsAddContentButtonVisible { get; set; }
     protected void Page_Load(object sender, EventArgs e)
     {
         #region Validating session
@@ -21,6 +22,12 @@ public partial class ShowContents : Page
         if (!IsPostBack)
         {
             getContents();
+        }
+
+        IsAddContentButtonVisible = true;
+        if (Convert.ToInt32(Session["IsStudent"]) == 1 && Convert.ToBoolean(Session["IsAllowEdit"]) == false)
+        {
+            IsAddContentButtonVisible = false;
         }
     }
 
@@ -97,7 +104,7 @@ public partial class ShowContents : Page
 
     protected void dlContents_ItemDataBound(object sender, System.Web.UI.WebControls.DataListItemEventArgs e)
     {
-        if (Convert.ToInt32(Session["IsStudent"]) != 0 && Convert.ToBoolean(Session["IsAllowEdit"]) == false)
+        if (Convert.ToInt32(Session["IsStudent"]) == 1 && Convert.ToBoolean(Session["IsAllowEdit"]) == false)
         {
             LinkButton lnkEdit = (LinkButton)e.Item.FindControl("lnkEdit");
             lnkEdit.Visible = false;

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+
 public partial class manageStudent : System.Web.UI.Page
 {
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CPDBCS"].ConnectionString);
@@ -90,7 +91,7 @@ public partial class manageStudent : System.Web.UI.Page
                 Boolean IsAllowedit = (row.FindControl("chkSelect") as CheckBox).Checked;
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "UPDATE_STUDENT_Permission";
+                cmd.CommandText = "UpdateStudentPermission";
                 cmd.Parameters.Add("@StudenttId", SqlDbType.Int).Value = Convert.ToInt32(studentId);
                 cmd.Parameters.Add("@IsAllowEdit", SqlDbType.Bit).Value = IsAllowedit;
                 cmd.Connection = con;
@@ -107,6 +108,7 @@ public partial class manageStudent : System.Web.UI.Page
                     con.Close();
                 }
             }
+
             Response.Redirect("manageStudent.aspx", false);
             ApplicationInstance.CompleteRequest();
         }

@@ -48,7 +48,8 @@
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>C</b>P</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Cell</b>Project</span>
+                <span class="logo-lg"><b>Hello <%=DisplayName%></b></span>
+                
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
@@ -114,7 +115,7 @@
                         </a>
                     </li>--%>
                         <li id="changePassword" runat="server">
-                            <a href="adminChangePassword.aspx">
+                            <a href="ChangePassword.aspx">
                                 <i class="fa fa-key"></i><span>Change Password</span>
                             </a>
                         </li>

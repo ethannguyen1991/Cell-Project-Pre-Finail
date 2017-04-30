@@ -26,7 +26,7 @@ public partial class registration : System.Web.UI.Page
                 }
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "REGISTER_STUDENT";
+                cmd.CommandText = "RegisterStudent";
                 cmd.Connection = con;
                 cmd.Parameters.Add("@firstName", SqlDbType.VarChar).Value = txtFirstName.Text;
                 cmd.Parameters.Add("@lastName", SqlDbType.VarChar).Value = txtLastName.Text;
@@ -34,6 +34,8 @@ public partial class registration : System.Web.UI.Page
                 cmd.Parameters.Add("@userName", SqlDbType.VarChar).Value = txtUserName.Text;
                 cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = txtPassword.Text;
                 cmd.Parameters.Add("@isActive", SqlDbType.Bit).Value = 1;
+                cmd.Parameters.Add("@IsAllowEdit", SqlDbType.Bit).Value = 0;
+                
                 cmd.ExecuteNonQuery();
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Registration Done Successfully !');window.location ='studentLogin.aspx';", true);
             }

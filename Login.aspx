@@ -37,6 +37,7 @@
                     </div>
                 </div>
             </form>
+            <a href="registration.aspx">New Registration</a>
         </div>
     </div>
 

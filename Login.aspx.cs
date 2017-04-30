@@ -31,6 +31,8 @@ public partial class adminLogin : Page
                 cmd.Parameters["@IsAllowEdit"].Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("@IsAdmin", SqlDbType.Bit);
                 cmd.Parameters["@IsAdmin"].Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@displayName", SqlDbType.VarChar, 255);
+                cmd.Parameters["@displayName"].Direction = ParameterDirection.Output;
                 cmd.Connection = con;
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -38,6 +40,7 @@ public partial class adminLogin : Page
                 string adminID = cmd.Parameters["@AccountId"].Value.ToString();
                 bool isAllowEdit = (bool)cmd.Parameters["@IsAllowEdit"].Value;
                 bool isAdmin = (bool)cmd.Parameters["@IsAdmin"].Value;
+                var displayName = (string)cmd.Parameters["@displayName"].Value;
 
                 if (!string.IsNullOrEmpty(adminID))
                 {
@@ -51,6 +54,7 @@ public partial class adminLogin : Page
                         Session["IsStudent"] = 1;
                         Session["IsAllowEdit"] = isAllowEdit;
                     }
+                    Session["DisplayName"] = displayName;
                     Response.Redirect("Home.aspx");
                 }
                 else

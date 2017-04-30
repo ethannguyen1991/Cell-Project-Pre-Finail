@@ -46,7 +46,7 @@ public partial class Content : Page
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Clear();
                 cmd.Parameters.Add("@UserID", SqlDbType.Int).Value = Convert.ToInt32(Session["UserID"]);
-                cmd.Parameters.Add("@ContentID", SqlDbType.Int).Value = 1;//Convert.ToInt32(Session["ContentID"]);//TODO fix later
+                cmd.Parameters.Add("@ContentID", SqlDbType.Int).Value = Convert.ToInt32(Session["ContentID"]);
                 cmd.Connection = con;
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();

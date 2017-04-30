@@ -43,7 +43,6 @@ public partial class Scenario : Page
                         txtwelcome.Text = ds.Tables["getScenario"].Rows[0]["Welcome"].ToString();
                         txtlearnabt.Text = ds.Tables["getScenario"].Rows[0]["LearnAbout"].ToString();
                         txtDesc.Text = ds.Tables["getScenario"].Rows[0]["Desciption"].ToString();
-                        lstRAnking.Text = ds.Tables["getScenario"].Rows[0]["Rank"].ToString();
                     }
                 }
             }
@@ -68,14 +67,6 @@ public partial class Scenario : Page
                     chkContents.DataValueField = "ContentID";
                     chkContents.DataBind();
                 }
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read())
-                //{
-                //    chkContents.DataSource = dr;
-                //    chkContents.DataTextField = "HeadingText";
-                //    chkContents.DataValueField = "ContentID";
-                //    chkContents.DataBind();
-                //}
             };
             #endregion
         }
@@ -126,10 +117,7 @@ public partial class Scenario : Page
                 cmd.Parameters.Add("@LearnAbt", SqlDbType.VarChar).Value = txtlearnabt.Text;
                 cmd.Parameters.Add("@Desc", SqlDbType.VarChar).Value = txtDesc.Text;
                 cmd.Parameters.Add("@Details", SqlDbType.VarChar).Value = txtDetails.Text;
-                if (lstRAnking.Text != null)
-                    cmd.Parameters.Add("@Rank", SqlDbType.VarChar).Value = lstRAnking.Text;
-                else
-                    cmd.Parameters.Add("@Rank", SqlDbType.VarChar).Value = "Low";
+                cmd.Parameters.Add("@Rank", SqlDbType.VarChar).Value = "Rank Obsolete";
 
                 if (!string.IsNullOrEmpty(image))
                 {

@@ -7,24 +7,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CellProject", ".", "{34654C
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_15554"
-		Debug.AspNetCompiler.PhysicalPath = "..\CellProject\"
+		Debug.AspNetCompiler.PhysicalPath = "..\Cell-master\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15554\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_15554"
-		Release.AspNetCompiler.PhysicalPath = "..\CellProject\"
+		Release.AspNetCompiler.PhysicalPath = "..\Cell-master\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15554\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "15554"
-		SlnRelativePath = "..\CellProject\"
+		SlnRelativePath = "..\Cell-master\"
 	EndProjectSection
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Cell", "Cell\Cell.sqlproj", "{085664B9-FACD-4007-93A2-F022CEFF9431}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,12 +34,6 @@ Global
 		{34654CD3-CF01-43C2-9E00-3F588610809A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34654CD3-CF01-43C2-9E00-3F588610809A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{34654CD3-CF01-43C2-9E00-3F588610809A}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{085664B9-FACD-4007-93A2-F022CEFF9431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{085664B9-FACD-4007-93A2-F022CEFF9431}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{085664B9-FACD-4007-93A2-F022CEFF9431}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{085664B9-FACD-4007-93A2-F022CEFF9431}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{085664B9-FACD-4007-93A2-F022CEFF9431}.Release|Any CPU.Build.0 = Release|Any CPU
-		{085664B9-FACD-4007-93A2-F022CEFF9431}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

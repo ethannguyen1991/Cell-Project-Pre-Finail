@@ -3,7 +3,8 @@ using System.Web.UI;
 
 public partial class Master : MasterPage
 {
-
+    public string DisplayName { get; set; }
+    
     protected void Page_Init(object sender, EventArgs e)
     {
         if (Session["UserID"] == null || Session["IsStudent"] == null)
@@ -25,6 +26,11 @@ public partial class Master : MasterPage
             studGrade.Visible = true;
             adminGrade.Visible = false;
             manageStudent.Visible = false;
+        }
+
+        if (Session["DisplayName"] != null)
+        {
+            DisplayName = Session["DisplayName"].ToString();
         }
     }
 

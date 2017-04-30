@@ -1,0 +1,4652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Cell.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\ETHANNGUYEN\DESKTOP\CELL\CELL-MASTER\CELL\OBJ\DEBUG\CELL.DLL" />
+			<Metadata Name="AssemblyName" Value="Cell" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\EthanNguyen\Desktop\cell\Cell-master\Cell\obj\Debug\Cell.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="CompatibilityMode" Value="130" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Admin]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[AdminID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[FName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[LName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[EmailID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[UserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[Password]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Admin].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[AdminLogin]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	IF EXISTS (SELECT 1 FROM [Admin] WHERE UserName = @UserName AND [Password] = @Password AND IsActive = 1)
+	BEGIN
+		SELECT 
+			@AdminID = AdminID 
+		FROM 
+			[Admin] 
+		WHERE 
+			UserName = @UserName 
+		AND 
+			[Password] = @Password
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Admin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AdminLogin].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AdminLogin].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AdminLogin].[@AdminID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[AdminID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[Password]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AdminLogin].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AdminLogin].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AdminLogin].[@AdminID]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="373" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[AdminLogin]&#xA;&#x9;@UserName&#x9;&#x9;&#x9;VARCHAR(100),&#xA;&#x9;@Password&#x9;&#x9;&#x9;VARCHAR(100),&#xA;&#x9;@AdminID&#x9;&#x9;&#x9;INT OUT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Comment]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[CommentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[ScenarioID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[ContentID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[StudentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[CreatedOn]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[Comments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Comment].[Grade]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Content]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[ContentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[HeadingID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[HeadingText]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Contents]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Image]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[HasCommentBox]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[HasButtons]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link1Caption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link1Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link2Caption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link2Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link3Caption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link3Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link4Caption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link4Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link5Caption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link5Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link6Caption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[Link6Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[IsCreatedByStudent]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[CreatedBy]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[CreatedOn]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Content].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DELETE_STUDENT]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DELETE FROM Student_Table WHERE studentId = @studentId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[studentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DELETE_STUDENT].[@studentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DELETE_STUDENT].[@studentId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="119" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[DELETE_STUDENT]&#xA;@studentId&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteContent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+DELETE FROM Content WHERE ContentID = @ContentId;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteContent].[@ContentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteContent].[@ContentId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="112" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[DeleteContent]&#xA;@ContentId&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteScenario]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+DELETE FROM Scenario WHERE ScenarioID = @ScenarioID
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteScenario].[@ScenarioID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteScenario].[@ScenarioID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="115" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[DeleteScenario]&#xA;@ScenarioID&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteSubContent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+DELETE FROM SubContent WHERE ParentID = @ParentId 
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[SubContent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SubContent].[ParentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteSubContent].[@ParentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteSubContent].[@ParentId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="115" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[DeleteSubContent]&#xA;@ParentId&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Electives]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Electives].[electiveId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Electives].[ScenarioId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Electives].[text]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GET_ADMIN_PROFILE]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+	SELECT 
+	AD.FName AS FIRSTNAME,
+	AD.LName AS LASTNAME,
+	AD.EmailID     AS EMAIL,
+	AD.UserName  AS USERNAME
+	FROM Admin  AD 
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Admin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[FName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[LName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[EmailID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[UserName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="192" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[GET_ADMIN_PROFILE]&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GET_STUDENT]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	
+	SELECT  
+	ST.studentId AS STUDENTID,st.IsAllowEdit,
+	(ST.firstName+ST.lastName) AS STUDENTNAME
+	FROM Student_Table ST
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[studentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[IsAllowEdit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[lastName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="165" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC&#x9;[dbo].[GET_STUDENT]&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GET_STUDENT_LIST_FOR_GRADE]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+	SELECT 
+			CMT.Comments							AS COMMENT,
+			CMT.ScenarioID							AS SCID,
+			(ST.firstName+ST.lastName)	AS STUDENTNAME,
+			CMT.[Grade]								AS GRADE,
+			SC.Name									AS LEVEL,
+			CMT.CommentID							AS COMMENTID
+			 
+	FROM	
+			Comment	 AS CMT
+
+			INNER JOIN
+
+			Scenario AS SC
+
+			ON      
+				CMT.ScenarioID = SC.ScenarioID
+
+			INNER JOIN
+
+			Student_Table		AS ST
+
+			ON		
+				ST.[studentId]  = CMT.StudentID
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Comment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[studentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[StudentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[Grade]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[CommentID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="477" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[GET_STUDENT_LIST_FOR_GRADE]&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GET_STUDENT_PROFILE]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+	SELECT 
+	ST.firstName AS FIRSTNAME,
+	ST.lastName  AS LASTNAME,
+	ST.email     AS EMAIL,
+	ST.userName  AS USERNAME
+	FROM Student_Table  ST 
+
+	WHERE ST.[studentId] = @studentId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[userName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[studentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GET_STUDENT_PROFILE].[@studentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GET_STUDENT_PROFILE].[@studentId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="259" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[GET_STUDENT_PROFILE]&#xA;@studentId&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Admin]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Admin].[AdminID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Admin]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Comment]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Comment].[CommentID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Comment]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Content]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Content].[ContentID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Electives]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Electives].[electiveId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Electives]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Scenario]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Scenario].[ScenarioID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_ScenarioContent]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[ScenarioContent].[ScenarioContentID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[ScenarioContent]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Student_Table]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Student_Table].[studentId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_SubContent]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[SubContent].[SubContentID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[SubContent]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[REGISTER_STUDENT]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	
+	SET NOCOUNT ON;
+
+		INSERT INTO [dbo].[Student_Table]
+		(
+			[firstName],
+			[lastName],
+			[email],
+			[userName],
+			[password],
+			IsActive,
+			IsAllowEdit
+		)
+		VALUES
+		(
+			@firstName,
+			@lastName,
+			@email,
+			@userName,
+			@password,
+			@isActive,
+			0
+
+		)
+
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[userName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[IsAllowEdit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[REGISTER_STUDENT].[@firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[REGISTER_STUDENT].[@lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[REGISTER_STUDENT].[@email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[REGISTER_STUDENT].[@userName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[REGISTER_STUDENT].[@password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[REGISTER_STUDENT].[@isActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[REGISTER_STUDENT].[@firstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[REGISTER_STUDENT].[@lastName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[REGISTER_STUDENT].[@email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[REGISTER_STUDENT].[@userName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[REGISTER_STUDENT].[@password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[REGISTER_STUDENT].[@isActive]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="465" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[REGISTER_STUDENT]&#xA;(&#xA;@firstName&#x9;&#x9;VARCHAR(MAX),&#xA;@lastName&#x9;&#x9;VARCHAR(MAX),&#xA;@email&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;@userName&#x9;&#x9;VARCHAR(MAX),&#xA;@password&#x9;&#x9;VARCHAR(MAX),&#xA;@isActive&#x9;&#x9;BIT&#xA;&#xA;)&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SaveComment]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO
+		Comment(ScenarioID, ContentID, StudentID, CreatedOn, IsActive,Comments)
+	VALUES
+		(@ScenarioID, @ContentID, @StudentID, GETDATE(), 1,@Comment)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Comment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[StudentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[CreatedOn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveComment].[@ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveComment].[@ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveComment].[@StudentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveComment].[@Comment]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveComment].[@ScenarioID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveComment].[@ContentID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveComment].[@StudentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveComment].[@Comment]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="318" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SaveComment]&#xA;&#x9;@ScenarioID&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@ContentID&#x9;&#x9;&#x9;&#x9;&#x9;INT = NULL,&#xA;&#x9;@StudentID&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@Comment&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX)&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SaveContent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+	IF EXISTS (SELECT 1 FROM Content WHERE ContentID = @ContentID AND @ContentID != -1)
+	BEGIN
+		UPDATE
+			Content
+		SET
+			HeadingID = @HeadingID, HeadingText = @HeadingText, Contents = @Contents,
+			[Image] = @Image, HasCommentBox = @HasCommentBox, 
+			Link1Caption=@Link1Caption,
+			Link1Description=@Link1Description,
+			Link2Caption=@Link2Caption,
+			Link2Description=@Link2Description,
+			Link3Caption=@Link3Caption,
+			Link3Description=@Link3Description,
+			Link4Caption=@Link4Caption,
+			Link4Description=@Link4Description,
+			Link5Caption=@Link5Caption,
+			Link5Description=@Link5Description,
+			Link6Caption=@Link6Caption,
+			Link6Description=@Link6Description,
+			HasButtons = @HasButtons
+		WHERE
+			ContentID = @ContentID;
+
+		SET
+			@NewContentID = @ContentID;
+	END
+
+	ELSE
+	BEGIN
+		INSERT INTO
+			Content(HeadingID, HeadingText, Contents, [Image], HasCommentBox, Link1Caption,Link1Description,Link2Caption,Link2Description,Link3Caption,Link3Description,
+			Link4Caption,Link4Description,
+			Link5Caption,Link5Description,
+			Link6Caption,Link6Description,
+			HasButtons, IsCreatedByStudent,
+			CreatedBy, CreatedOn, IsActive)
+		VALUES
+			(@HeadingID, @HeadingText, @Contents, @Image, @HasCommentBox, @Link1Caption,@Link1Description,@Link2Caption,@Link2Description,@Link3Caption,@Link3Description,
+			@Link4Caption,@Link4Description,
+			@Link5Caption,@Link5Description,
+			@Link6Caption,@Link6Description,
+			@HasButtons, @IsCreatedByStudent,
+			@CreatedBy, GETDATE(), 1);
+
+		SET
+			@NewContentID = SCOPE_IDENTITY();
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@HeadingID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingText]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@HeadingText]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Contents]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Contents]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HasCommentBox]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@HasCommentBox]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link1Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link1Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link1Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link1Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link2Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link2Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link2Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link2Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link3Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link3Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link3Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link3Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link4Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link4Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link4Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link4Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link5Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link5Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link5Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link5Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link6Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link6Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link6Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@Link6Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HasButtons]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@HasButtons]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@NewContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[IsCreatedByStudent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[CreatedBy]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[CreatedOn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@IsCreatedByStudent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveContent].[@CreatedBy]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@ContentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@HeadingID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@HeadingText]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Contents]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Image]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link1Caption]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link1Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link2Caption]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link2Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link3Caption]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link3Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link4Caption]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link4Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link5Caption]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link5Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link6Caption]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@Link6Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@HasCommentBox]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@HasButtons]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@IsCreatedByStudent]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@CreatedBy]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveContent].[@NewContentID]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="2277" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SaveContent]&#xA;&#x9;@ContentID&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@HeadingID&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(100),&#xA;&#x9;@HeadingText&#x9;&#x9;&#x9;&#x9;VARCHAR(100),&#xA;&#x9;@Contents&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@Image&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(200) = NULL,&#xA;&#x9;@Link1Caption&#x9;&#x9;&#x9;&#x9;&#x9;varchar(150),&#xA;&#x9;@Link1Description&#x9;&#x9;&#x9;&#x9;&#x9;varchar(MAX),&#xA;&#x9;@Link2Caption&#x9;&#x9;&#x9;&#x9;&#x9;varchar(150),&#xA;&#x9;@Link2Description&#x9;&#x9;&#x9;&#x9;&#x9;varchar(MAX),&#xA;&#x9;@Link3Caption&#x9;&#x9;&#x9;&#x9;&#x9;varchar(150),&#xA;&#x9;@Link3Description&#x9;&#x9;&#x9;&#x9;&#x9;varchar(MAX),&#xA;&#x9;@Link4Caption&#x9;&#x9;&#x9;&#x9;&#x9;varchar(150),&#xA;&#x9;@Link4Description&#x9;&#x9;&#x9;&#x9;&#x9;varchar(MAX),&#xA;&#x9;@Link5Caption&#x9;&#x9;&#x9;&#x9;&#x9;varchar(150),&#xA;&#x9;@Link5Description&#x9;&#x9;&#x9;&#x9;&#x9;varchar(MAX),&#xA;&#x9;@Link6Caption&#x9;&#x9;&#x9;&#x9;&#x9;varchar(150),&#xA;&#x9;@Link6Description&#x9;&#x9;&#x9;&#x9;&#x9;varchar(MAX),&#xA;&#x9;@HasCommentBox&#x9;&#x9;&#x9;&#x9;BIT,&#xA;&#x9;@HasButtons&#x9;&#x9;&#x9;&#x9;&#x9;BIT,&#xA;&#x9;@IsCreatedByStudent&#x9;&#x9;&#x9;BIT,&#xA;&#x9;@CreatedBy&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@NewContentID&#x9;&#x9;&#x9;&#x9;INT OUT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SaveScenario]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	IF EXISTS (SELECT 1 FROM Scenario WHERE ScenarioID = @ScenarioID AND @ScenarioID != -1)
+	BEGIN
+		UPDATE
+			Scenario
+		SET
+			Name = @Name, Welcome = @Welcome, LearnAbout = @LearnAbt,Desciption = @Desc,Details = @Details,[Rank]=@Rank,[Image] = @Image, 
+			IsCreatedByStudent = @IsCreatedByStudent, IsActive = 1
+		WHERE
+			ScenarioID = @ScenarioID
+		SET
+			@NewScenarioID = @ScenarioID
+	END
+
+	ELSE
+	BEGIN
+		INSERT INTO
+			Scenario(Name,Welcome,LearnAbout,Desciption, Details, [Rank],[Image], IsCreatedByStudent, CreatedBy, CreatedOn, IsActive)
+		VALUES
+			(@Name,@Welcome,@LearnAbt,@Desc, @Details,@Rank, @Image,@IsCreatedByStudent, @CreatedBy, GETDATE(), 1)
+
+		SET
+			@NewScenarioID = SCOPE_IDENTITY();
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Welcome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@Welcome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[LearnAbout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@LearnAbt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Desciption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@Desc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Rank]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@Rank]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@Image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[IsCreatedByStudent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@IsCreatedByStudent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@NewScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[CreatedBy]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[CreatedOn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenario].[@CreatedBy]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@ScenarioID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@Welcome]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@LearnAbt]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@Desc]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@Details]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@Rank]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@Image]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@IsCreatedByStudent]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@CreatedBy]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenario].[@NewScenarioID]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1063" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SaveScenario]&#xA;&#x9;@ScenarioID&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@Name&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(50),&#xA;&#x9;@Welcome&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@LearnAbt&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@Desc&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@Details&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@Rank&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(50),&#xA;&#x9;@Image&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(200) = NULL,&#xA;&#x9;@IsCreatedByStudent&#x9;&#x9;&#x9;BIT,&#xA;&#x9;@CreatedBy&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@NewScenarioID&#x9;&#x9;&#x9;&#x9;INT OUT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SaveScenarioContent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	IF(@IsDeleted = 1)
+	BEGIN
+		DELETE FROM 
+			ScenarioContent 
+		WHERE 
+			ScenarioID = @ScenarioID 
+		AND 
+			ContentID = @ContentID
+	END
+
+	ELSE
+	BEGIN
+		INSERT INTO
+			ScenarioContent(ScenarioID, ContentID, IsActive)
+		VALUES
+			(@ScenarioID, @ContentID, 1)
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[SaveScenarioContent].[@IsDeleted]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenarioContent].[@ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveScenarioContent].[@ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenarioContent].[@ScenarioID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenarioContent].[@ContentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveScenarioContent].[@IsDeleted]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="394" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SaveScenarioContent]&#xA;&#x9;@ScenarioID&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@ContentID&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@IsDeleted&#x9;&#x9;&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SaveSubContent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	--IF(@IsDeleted = 1)
+	--BEGIN
+	--	DELETE FROM 
+	--		SubContent 
+	--	WHERE 
+	--		ParentID = @ParentID 
+	--	AND 
+	--		ChildID = @ChildID
+	--END
+
+	--ELSE
+	--BEGIN
+	--	IF (@ParentID != @ChildID)
+	--	BEGIN
+			INSERT INTO
+				SubContent(ParentID, ChildID, IsActive)
+			VALUES
+				(@ParentID, @ChildID, 1)
+	--	END
+	--END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[SubContent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SubContent].[ParentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SubContent].[ChildID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SubContent].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveSubContent].[@ParentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveSubContent].[@ChildID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveSubContent].[@ParentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveSubContent].[@ChildID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveSubContent].[@IsDeleted]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="436" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SaveSubContent]&#xA;&#x9;@ParentID&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@ChildID&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@IsDeleted&#x9;&#x9;&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SaveUpdateScenario]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+		UPDATE
+			Scenario
+		SET
+			Welcome = @Welcome, LearnAbout = @LearnAbt,Desciption = @Desc,Details = @Details
+		WHERE
+			ScenarioID = @ScenarioID
+		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Welcome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveUpdateScenario].[@Welcome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[LearnAbout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveUpdateScenario].[@LearnAbt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Desciption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveUpdateScenario].[@Desc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveUpdateScenario].[@Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SaveUpdateScenario].[@ScenarioID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveUpdateScenario].[@ScenarioID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveUpdateScenario].[@Welcome]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveUpdateScenario].[@LearnAbt]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveUpdateScenario].[@Desc]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SaveUpdateScenario].[@Details]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="352" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SaveUpdateScenario]&#xA;&#x9;@ScenarioID&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@Welcome&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@LearnAbt&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@Desc&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;&#x9;@Details&#x9;&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX)&#xA;&#x9;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Scenario]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[ScenarioID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[Welcome]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[LearnAbout]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[Desciption]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[Details]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[Rank]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[Image]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[IsCreatedByStudent]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[CreatedBy]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[CreatedOn]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Scenario].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[ScenarioContent]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ScenarioContent].[ScenarioContentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ScenarioContent].[ScenarioID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ScenarioContent].[ContentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ScenarioContent].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SHOW_GRADE_TO_STUDENT]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	
+	SELECT 
+	
+	CT.Comments  AS COMMENT,
+	SC.Name		 AS LEVEL,
+	CT.Grade     AS GRADE	 
+	
+	FROM Comment AS CT
+
+	INNER JOIN
+
+	Scenario	AS SC	
+
+	ON	CT.ScenarioID	= SC.ScenarioID
+
+	WHERE CT.StudentID  = @studentId
+
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Comment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[Grade]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[StudentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SHOW_GRADE_TO_STUDENT].[@studentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SHOW_GRADE_TO_STUDENT].[@studentId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="279" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[SHOW_GRADE_TO_STUDENT]&#xA;@studentId&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ShowContent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT
+		CONT.ContentID			AS ContentID,
+		CONT.HeadingID			AS HeadingID,
+		CONT.HeadingText		AS HeadingText,
+		CONT.[Image]			AS [Image],
+		CONT.Contents			AS Contents,
+		CONT.HasCommentBox		AS HasCommentBox,
+		CONT.HasButtons			AS HasButtons,
+		CONT.Link1Caption	as  Link1Caption,
+		CONT.Link2Caption	as  Link2Caption,
+		CONT.Link3Caption	as  Link3Caption,
+		CONT.Link4Caption	as  Link4Caption,
+		CONT.Link5Caption	as  Link5Caption,
+		CONT.Link6Caption	as  Link6Caption,
+		cont.Link1Description as Link1Description,
+		cont.Link2Description as Link2Description,
+		cont.Link3Description as Link3Description,
+		cont.Link4Description as Link4Description,
+		cont.Link5Description as Link5Description,
+		cont.Link6Description as Link6Description
+	FROM
+		Content					AS CONT
+	WHERE
+		CONT.IsActive = 1
+	AND
+		(CONT.ContentID = @ContentID OR @ContentID IS NULL)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingText]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Contents]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HasCommentBox]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HasButtons]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link1Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link2Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link3Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link4Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link5Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link6Caption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link1Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link2Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link3Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link4Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link5Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[Link6Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ShowContent].[@ContentID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowContent].[@UserID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowContent].[@ContentID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="964" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[ShowContent]&#xA;&#x9;@UserID&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@ContentID&#x9;&#x9;&#x9;&#x9;&#x9;INT = NULL&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ShowContentByScenarioID]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT
+		CONT.ContentID			AS ContentID,
+		CONT.HeadingID			AS HeadingID,
+		CONT.HeadingText		AS HeadingText
+	FROM
+		Content					AS CONT
+	INNER JOIN
+		ScenarioContent			AS SC
+	ON
+		CONT.ContentID = SC.ContentID
+	WHERE
+		CONT.IsActive = 1
+	AND
+		(SC.ScenarioID = @ScenarioID)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingText]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ScenarioContent].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ShowContentByScenarioID].[@ScenarioID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowContentByScenarioID].[@UserID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowContentByScenarioID].[@ScenarioID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="390" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[ShowContentByScenarioID]&#xA;&#x9;@UserID&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;INT,&#xA;&#x9;@ScenarioID&#x9;&#x9;&#x9;&#x9;&#x9;INT &#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ShowScenario]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT
+		--'Scenario ' + 
+		--CONVERT(VARCHAR, ROW_NUMBER() 
+		--OVER(PARTITION BY ScenarioID ORDER BY ScenarioID ASC)) AS ScenarioNumber,
+		SCN.Name				AS ScenarioNumber,
+		SCN.ScenarioID			AS ScenarioID,
+		SCN.Name				AS Name,
+		SCN.Welcome				AS Welcome,
+		SCN.LearnAbout				AS LearnAbout,
+		scn.Desciption			as Desciption,
+		SCN.Details				AS Details,
+		SCN.[Image]				AS [Image],
+		SCN.[Rank]				AS [Rank]
+		
+	FROM 
+		Scenario				AS SCN
+	WHERE
+		SCN.IsActive = 1
+	AND
+		(SCN.ScenarioID = @ScenarioID OR @ScenarioID IS NULL)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Scenario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Welcome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[LearnAbout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Desciption]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[Rank]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Scenario].[ScenarioID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ShowScenario].[@ScenarioID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowScenario].[@UserID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowScenario].[@ScenarioID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="647" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[ShowScenario]&#xA;&#x9;@UserID&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;INT = NULL,&#xA;&#x9;@ScenarioID&#x9;&#x9;&#x9;&#x9;&#x9;INT = NULL&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ShowSubContentByContentID]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT
+		CONT.ContentID			AS ContentID,
+		CONT.HeadingID			AS HeadingID,
+		CONT.HeadingText		AS HeadingText
+	FROM
+		SubContent				AS SC
+	INNER JOIN
+		Content					AS CONT
+	ON
+		SC.ChildID = CONT.ContentID
+	WHERE
+		SC.ParentID = @ContentID
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[SubContent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SubContent].[ChildID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[ContentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Content].[HeadingText]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SubContent].[ParentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ShowSubContentByContentID].[@ContentID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowSubContentByContentID].[@UserID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ShowSubContentByContentID].[@ContentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="362" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[ShowSubContentByContentID] &#xA;&#x9;@UserID&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;INT = NULL,&#xA;&#x9;@ContentID&#x9;&#x9;&#x9;&#x9;&#x9;INT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[STUDENT_LOGIN]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON;
+
+	IF EXISTS (SELECT 1 FROM [dbo].[Student_Table] WHERE userName = @UserName AND [Password] = @Password AND IsActive = 1)
+	BEGIN
+		SELECT 
+			@StudentId = studentId,
+			@IsAllowEdit=IsAllowEdit
+		FROM 
+			[dbo].[Student_Table]
+		WHERE 
+			userName = @UserName 
+		AND 
+			[Password] = @Password
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[userName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STUDENT_LOGIN].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STUDENT_LOGIN].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STUDENT_LOGIN].[@StudentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[studentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STUDENT_LOGIN].[@IsAllowEdit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[IsAllowEdit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[userName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[password]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[STUDENT_LOGIN].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[STUDENT_LOGIN].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[STUDENT_LOGIN].[@StudentId]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[STUDENT_LOGIN].[@IsAllowEdit]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="462" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[STUDENT_LOGIN]&#xA;&#xA;&#x9;@UserName&#x9;&#x9;&#x9;VARCHAR(100),&#xA;&#x9;@Password&#x9;&#x9;&#x9;VARCHAR(100),&#xA;&#x9;@StudentId&#x9;&#x9;&#x9;INT OUT,&#xA;&#x9;@IsAllowEdit&#x9;&#x9;bit OUT&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Student_Table]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[studentId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[firstName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[lastName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[email]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[userName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[password]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[IsAllowEdit]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Student_Table].[IsActive]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="9" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[SubContent]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SubContent].[SubContentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SubContent].[ParentID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SubContent].[ChildID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SubContent].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="10" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UPDATE_ADMIN_PROFILE]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE		Admin 
+    SET			FName = @firstName,
+				LName  = @lastName,
+				EmailID	  = @email,
+				UserName  = @userName
+		
+	WHERE		UserName = @userName;	
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Admin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[FName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_ADMIN_PROFILE].[@firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[LName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_ADMIN_PROFILE].[@lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[EmailID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_ADMIN_PROFILE].[@email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Admin].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_ADMIN_PROFILE].[@userName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_ADMIN_PROFILE].[@firstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_ADMIN_PROFILE].[@lastName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_ADMIN_PROFILE].[@email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_ADMIN_PROFILE].[@userName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="305" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[UPDATE_ADMIN_PROFILE]&#xA;@firstName&#x9;&#x9;VARCHAR(MAX),&#xA;@lastName&#x9;&#x9;VARCHAR(MAX),&#xA;@email&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;@userName&#x9;&#x9;VARCHAR(MAX)&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UPDATE_GRADE]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+		UPDATE Comment
+		
+		SET		Grade = @grade 
+
+		WHERE	CommentID = @commentId;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Comment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[Grade]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_GRADE].[@grade]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Comment].[CommentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_GRADE].[@commentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_GRADE].[@commentId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_GRADE].[@grade]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="163" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[UPDATE_GRADE]&#xA;@commentId&#x9;&#x9;&#x9;INT,&#xA;@grade&#x9;&#x9;&#x9;&#x9;VARCHAR(MAX)&#xA;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UPDATE_STUDENT_Permission]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE Student_Table
+
+    SET IsAllowEdit = @IsAllowEdit
+		
+		WHERE studentId = @StudenttId;	
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[IsAllowEdit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_STUDENT_Permission].[@IsAllowEdit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[studentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_STUDENT_Permission].[@StudenttId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_STUDENT_Permission].[@StudenttId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_STUDENT_Permission].[@IsAllowEdit]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="197" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create PROC [dbo].[UPDATE_STUDENT_Permission]&#xA;@StudenttId&#x9;&#x9;&#x9;INT,&#xA;@IsAllowEdit        bit&#xA;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UPDATE_STUDENT_PROFILE]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE Student_Table
+
+    SET firstName = @firstName,
+		lastName  = @lastName,
+		email	  = @email,
+		userName  = @userName
+		
+		WHERE userName = @userName;	
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Student_Table]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_STUDENT_PROFILE].[@firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_STUDENT_PROFILE].[@lastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_STUDENT_PROFILE].[@email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Student_Table].[userName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UPDATE_STUDENT_PROFILE].[@userName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_STUDENT_PROFILE].[@firstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_STUDENT_PROFILE].[@lastName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_STUDENT_PROFILE].[@email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UPDATE_STUDENT_PROFILE].[@userName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="311" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[UPDATE_STUDENT_PROFILE]&#xA;@firstName&#x9;&#x9;VARCHAR(MAX),&#xA;@lastName&#x9;&#x9;VARCHAR(MAX),&#xA;@email&#x9;&#x9;&#x9;VARCHAR(MAX),&#xA;@userName&#x9;&#x9;VARCHAR(MAX)&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

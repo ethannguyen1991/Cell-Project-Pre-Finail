@@ -9,9 +9,12 @@ using System.Linq;
 public partial class Home : Page
 {
     private Random random;
+    private const double probabilityAcceptPreviousScenarioId = 0.25;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         random = new Random();
+        
         #region Validating session
         if (Session["UserID"] == null || Session["IsStudent"] == null)
         {
@@ -29,12 +32,12 @@ public partial class Home : Page
         {
             if (Convert.ToInt32(Session["IsStudent"]) == 1)
             {
-                lblwelcome.Text = "Welcome Student :" + Session["UserName"];
+                lblwelcome.Text = "Welcome Student " + Session["DisplayName"];
                 lblweldescp.Text = decsription;
             }
             else
             {
-                lblwelcome.Text = "Welcome Admin :" + Session["UserName"];
+                lblwelcome.Text = "Welcome Admin " + Session["DisplayName"];
                 lblweldescp.Text = "";
                 pnlAdmin.Visible = true;
                 SetDashboardForAdmin();
@@ -57,6 +60,32 @@ public partial class Home : Page
             lblstudetn.Text = @"Available no of student  " + studentcount.ToString();
             
         };
+    }
+    /*Verify to see if this scenario was used previously, 
+     * if so, give it a 25% of being accepted.  So that the 
+     * likely hood of same scenario repeating multiple times 
+     * in a row is reduced significantly*/
+    private bool isPreviousScenarioId(int currentScenarioId)
+    {
+        var previousScenarioId = 0;
+        
+        if(Session["PreviousScenarioId"] == null) return false;
+        int.TryParse(Session["PreviousScenarioId"].ToString(), out previousScenarioId);
+        
+        //if it is previous scenario id, then do the probability test
+        if (previousScenarioId == currentScenarioId)
+        {
+            var randomDouble = random.NextDouble();
+            //if random generated double is less than the threshold, then allow the scenario id by returning false
+            if(randomDouble <= probabilityAcceptPreviousScenarioId)
+            {
+                return false;
+            }
+            //else reject the scenario id by returning true
+            return true;
+        }
+
+        return false;
     }
 
     public int getRandomScenarioId() 
@@ -83,9 +112,25 @@ public partial class Home : Page
                 {
                     var scenarioList = ds.Tables[0].AsEnumerable().ToList();//convert to list
                     var randomNumber = random.Next(scenarioList.Count);//generate random number
-                    return (int)scenarioList[randomNumber][1];//return the random scenario id
-                    
-                }else
+                    var currentScenarioId = (int)scenarioList[randomNumber][1];
+                    var scenarioAccepted = false;
+                    do
+                    {
+                        randomNumber = random.Next(scenarioList.Count);
+                        currentScenarioId = (int)scenarioList[randomNumber][1];
+                        //isPreviousScenarioId will test to see if currentScenarioId shall be accepted
+                        if (false == isPreviousScenarioId(currentScenarioId))
+                        {
+                            scenarioAccepted = true;
+                        }
+                    } while (scenarioAccepted == false);
+
+                    Session["PreviousScenarioId"] = currentScenarioId.ToString();
+                    return currentScenarioId;//return the random scenario id
+
+
+                }
+                else
                 {
                     return -1;
                 }

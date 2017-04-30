@@ -13,9 +13,11 @@
                     <div class="row">
                         <div class="col-md-2 pull-right">
                             <div class="form-group">
-                                <asp:LinkButton ID="btnAddContent" runat="server" CssClass="btn btn-primary" OnClick="btnAddContent_Click">
+                                <% if (IsAddContentButtonVisible) {%>
+                                <asp:LinkButton ID="btnAddContent" runat="server" CssClass="btn btn-primary" OnClick="btnAddContent_Click" >
                                     <span class="glyphicon glyphicon-plus"></span> Add New Content
                                 </asp:LinkButton>
+                                <% }%>
                             </div>
                         </div>
                     </div>
