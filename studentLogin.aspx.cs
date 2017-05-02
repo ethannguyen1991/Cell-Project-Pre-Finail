@@ -7,7 +7,7 @@ public partial class studentLogin : System.Web.UI.Page
 {
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CPDBCS"].ConnectionString);
     SqlCommand cmd = new SqlCommand();
-    SqlDataAdapter adp;
+    
     DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {

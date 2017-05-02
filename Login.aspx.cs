@@ -3,6 +3,7 @@ using System.Web.UI;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Linq;
 
 public partial class adminLogin : Page
 {
@@ -10,7 +11,6 @@ public partial class adminLogin : Page
     {
 
     }
-
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         using (SqlConnection con = new SqlConnection())
@@ -42,6 +42,16 @@ public partial class adminLogin : Page
                 bool isAdmin = (bool)cmd.Parameters["@IsAdmin"].Value;
                 var displayName = (string)cmd.Parameters["@displayName"].Value;
 
+                if (!String.IsNullOrWhiteSpace(displayName)) { 
+                    var stringTokens = displayName.Split(' ');
+                    var firstName = stringTokens[0] ?? "";
+                    var lastName = stringTokens[1] ?? "";
+                    if(!String.IsNullOrWhiteSpace(firstName))
+                        firstName = char.ToUpper(firstName[0]) + firstName.Substring(1).ToLower();
+                    if(!String.IsNullOrWhiteSpace(lastName))
+                        lastName = char.ToUpper(lastName[0]) + lastName.Substring(1).ToLower();
+                    displayName = firstName + " " + lastName;
+                }
                 if (!string.IsNullOrEmpty(adminID))
                 {
                     Session["UserID"] = adminID;
@@ -66,8 +76,8 @@ public partial class adminLogin : Page
             }
             catch (Exception ex)
             {
-                //  throw new Exception(ex.Message);
+                var yourMomma = ex.Message;
+                //throw new Exception(ex.Message);
             }
         };
-    }
-}
+    }}

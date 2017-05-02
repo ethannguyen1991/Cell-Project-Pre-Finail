@@ -10,7 +10,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="dist/css/AdminLTE.css" rel="stylesheet" />
     <link href="plugins/iCheck/square/blue.css" rel="stylesheet" />
 </head>
 <body class="hold-transition login-page">

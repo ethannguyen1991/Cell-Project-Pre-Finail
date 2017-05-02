@@ -8,7 +8,7 @@ public partial class registration : System.Web.UI.Page
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CPDBCS"].ConnectionString);
     SqlCommand cmd = new SqlCommand();
     DataSet ds = new DataSet();
-    SqlDataAdapter adp;
+    
     protected void Page_Load(object sender, EventArgs e)
     {
 
