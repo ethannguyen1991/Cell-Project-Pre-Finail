@@ -14,7 +14,7 @@
                     <p>
                         <asp:Label ID="lblweldescp" runat="server" Text="" Font-Size="Large"></asp:Label>
                     </p>
-                    <asp:Panel ID="pnlAdmin" runat="server" Visible="false">
+                    <asp:Panel class="home-stats" ID="pnlAdmin" runat="server" Visible="false">
                         <asp:Label ID="lblscenario" runat="server" Text="" Font-Size="Large"></asp:Label>
                         <asp:HyperLink ID="lnkscenario" NavigateUrl="~/ShowScenarios.aspx" runat="server">Details</asp:HyperLink><br />
                         <asp:Label ID="lblcontent" runat="server" Text="" Font-Size="Large"></asp:Label>
